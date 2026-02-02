@@ -194,6 +194,14 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* Transparent countdown boxes - UPDATED */
+        .countdown-box-transparent {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -249,16 +257,7 @@
         <!-- Slideshow Background -->
         <div class="absolute inset-0 z-0">
             <div class="hero-slide opacity-100 transition-opacity duration-2000 absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop&q=90" alt="Wedding Photo 1" class="w-full h-full object-cover">
-            </div>
-            <div class="hero-slide opacity-0 transition-opacity duration-2000 absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&h=1080&fit=crop&q=90" alt="Wedding Photo 2" class="w-full h-full object-cover">
-            </div>
-            <div class="hero-slide opacity-0 transition-opacity duration-2000 absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1920&h=1080&fit=crop&q=90" alt="Wedding Photo 3" class="w-full h-full object-cover">
-            </div>
-            <div class="hero-slide opacity-0 transition-opacity duration-2000 absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&h=1080&fit=crop&q=90" alt="Wedding Photo 4" class="w-full h-full object-cover">
+                <img src="156f95f0-f1f2-41b5-9feb-c47d96ff65d0.jpeg" alt="Wedding Photo 1" class="w-full h-full object-cover">
             </div>
         </div>
 
@@ -404,7 +403,7 @@
                         <!-- Card Container -->
                         <div class="relative bg-gradient-to-br from-white via-cream to-white rounded-[40px] overflow-hidden shadow-2xl card-3d">
                             <div class="aspect-[3/4] overflow-hidden">
-                                <img src="/mnt/user-data/uploads/1770055976415_image.png" 
+                                <img src="7dc164ec-37de-419b-9e33-a92eafd44fdc.jpeg" 
                                      alt="Cô dâu Phương Thảo" 
                                      class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -435,7 +434,7 @@
                         <!-- Card Container -->
                         <div class="relative bg-gradient-to-br from-white via-cream to-white rounded-[40px] overflow-hidden shadow-2xl card-3d">
                             <div class="aspect-[3/4] overflow-hidden">
-                                <img src="/mnt/user-data/uploads/1770056002344_image.png" 
+                                <img src="bc6fcb69-9450-4329-8201-75081809241d.jpeg" 
                                      alt="Chú rể Phương Đông" 
                                      class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -705,79 +704,61 @@
     <!-- Gradient Transition -->
     <div class="h-48 bg-gradient-to-b from-white via-cream/30 to-transparent"></div>
 
-    <!-- Countdown Section - Full Image Background -->
+    <!-- Countdown Section - Small Corner Top Right -->
     <section class="relative py-0 px-0 overflow-hidden min-h-screen flex items-center justify-center gradient-fade-both">
-        <!-- Background Image -->
+        <!-- Background Image - Clear -->
         <div class="absolute inset-0 z-0">
-            <img src="/mnt/user-data/uploads/1770056002344_image.png" 
+            <img src="0b6a64d0-658b-4bb9-916b-9fa6a26c68bc.jpeg" 
                  alt="Wedding Couple" 
                  class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-b from-burgundy-dark/70 via-burgundy/50 to-burgundy-dark/80"></div>
+            <!-- Very light overlay -->
+            <div class="absolute inset-0 bg-black/10"></div>
         </div>
 
-        <!-- Content -->
-        <div class="relative z-10 text-center px-6 w-full max-w-5xl py-20">
+        <!-- Countdown - Small Top Right Corner -->
+        <div class="absolute top-8 md:top-12 right-8 md:right-16 z-10 text-center animate-fade-in">
             <!-- Countdown Title -->
-            <div class="mb-12">
-                <h2 class="font-playfair text-6xl md:text-8xl font-bold text-white tracking-wider animate-fade-in-down" 
-                    style="text-shadow: 0 8px 30px rgba(0,0,0,0.6);">
-                    Countdown
-                </h2>
-            </div>
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-white tracking-wider mb-4 md:mb-6" 
+                style="text-shadow: 0 4px 20px rgba(0,0,0,0.8);">
+                Countdown
+            </h2>
 
-            <!-- Countdown Timer Boxes -->
-            <div class="grid grid-cols-4 gap-4 md:gap-8 max-w-3xl mx-auto mb-16">
+            <!-- Countdown Numbers - Compact -->
+            <div class="grid grid-cols-4 gap-3 md:gap-4 mb-4 md:mb-6">
                 <div class="countdown-item opacity-0 transform scale-90 transition-all duration-700">
-                    <div class="glass-strong backdrop-blur-xl rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-white/30">
-                        <div id="days" class="font-playfair text-5xl md:text-7xl font-bold text-burgundy-dark mb-3">00</div>
-                        <div class="text-sm md:text-base text-gray-700 uppercase tracking-wider font-bold">ngày</div>
-                    </div>
+                    <div id="days" class="font-playfair text-3xl md:text-4xl font-bold text-white mb-1" style="text-shadow: 0 3px 15px rgba(0,0,0,0.9);">00</div>
+                    <div class="text-[10px] md:text-xs text-white uppercase tracking-wide font-semibold" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">NGÀY</div>
                 </div>
 
                 <div class="countdown-item opacity-0 transform scale-90 transition-all duration-700" style="animation-delay: 100ms;">
-                    <div class="glass-strong backdrop-blur-xl rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-white/30">
-                        <div id="hours" class="font-playfair text-5xl md:text-7xl font-bold text-burgundy-dark mb-3">00</div>
-                        <div class="text-sm md:text-base text-gray-700 uppercase tracking-wider font-bold">giờ</div>
-                    </div>
+                    <div id="hours" class="font-playfair text-3xl md:text-4xl font-bold text-white mb-1" style="text-shadow: 0 3px 15px rgba(0,0,0,0.9);">00</div>
+                    <div class="text-[10px] md:text-xs text-white uppercase tracking-wide font-semibold" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">GIỜ</div>
                 </div>
 
                 <div class="countdown-item opacity-0 transform scale-90 transition-all duration-700" style="animation-delay: 200ms;">
-                    <div class="glass-strong backdrop-blur-xl rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-white/30">
-                        <div id="minutes" class="font-playfair text-5xl md:text-7xl font-bold text-burgundy-dark mb-3">00</div>
-                        <div class="text-sm md:text-base text-gray-700 uppercase tracking-wider font-bold">phút</div>
-                    </div>
+                    <div id="minutes" class="font-playfair text-3xl md:text-4xl font-bold text-white mb-1" style="text-shadow: 0 3px 15px rgba(0,0,0,0.9);">00</div>
+                    <div class="text-[10px] md:text-xs text-white uppercase tracking-wide font-semibold" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">PHÚT</div>
                 </div>
 
                 <div class="countdown-item opacity-0 transform scale-90 transition-all duration-700" style="animation-delay: 300ms;">
-                    <div class="glass-strong backdrop-blur-xl rounded-3xl p-6 md:p-10 shadow-2xl border-2 border-white/30">
-                        <div id="seconds" class="font-playfair text-5xl md:text-7xl font-bold text-burgundy-dark mb-3">00</div>
-                        <div class="text-sm md:text-base text-gray-700 uppercase tracking-wider font-bold">giây</div>
-                    </div>
+                    <div id="seconds" class="font-playfair text-3xl md:text-4xl font-bold text-white mb-1" style="text-shadow: 0 3px 15px rgba(0,0,0,0.9);">00</div>
+                    <div class="text-[10px] md:text-xs text-white uppercase tracking-wide font-semibold" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">GIÂY</div>
                 </div>
             </div>
 
-            <!-- Love Message -->
-            <div class="max-w-4xl mx-auto px-6 animate-fade-in animation-delay-500">
-                <div class="frosted-glass rounded-[40px] p-10 md:p-14 border border-white/20">
-                    <p class="text-white text-lg md:text-2xl leading-relaxed font-crimson mb-6" 
-                       style="text-shadow: 0 4px 20px rgba(0,0,0,0.8);">
-                        Cảm ơn bạn đã dành tình cảm cho chúng mình! Sự hiện diện của bạn
-                        là món quà ý nghĩa nhất, và chúng mình vô cùng
-                        hạnh phúc khi được cùng bạn chia sẻ niềm hạnh phúc
-                        trong ngày trọng đại này.
-                    </p>
-                    <div class="font-vibes text-4xl md:text-6xl text-white mt-8" 
-                         style="text-shadow: 0 4px 20px rgba(0,0,0,0.8);">
-                        forever & always
-                    </div>
+            <!-- Love Message - Compact -->
+            <div class="max-w-xs animate-fade-in animation-delay-500">
+                <p class="text-white text-xs md:text-sm leading-relaxed font-crimson mb-3 px-2" 
+                   style="text-shadow: 0 2px 12px rgba(0,0,0,0.9);">
+                    Cảm ơn bạn đã dành tình cảm cho chúng mình! Sự hiện diện của bạn
+                    là món quà ý nghĩa nhất, và chúng mình vô cùng
+                    hạnh phúc khi được cùng bạn chia sẻ niềm hạnh phúc
+                    trong ngày trọng đại này.
+                </p>
+                <div class="font-vibes text-2xl md:text-3xl text-white" 
+                     style="text-shadow: 0 2px 12px rgba(0,0,0,0.9);">
+                    forever & always
                 </div>
-            </div>
-
-            <!-- Decorative Hearts -->
-            <div class="flex justify-center gap-6 mt-12">
-                <span class="text-4xl md:text-5xl text-white/80 animate-float drop-shadow-2xl">💖</span>
-                <span class="text-5xl md:text-6xl text-white animate-float animation-delay-500 drop-shadow-2xl">❤️</span>
-                <span class="text-4xl md:text-5xl text-white/80 animate-float animation-delay-1000 drop-shadow-2xl">💖</span>
             </div>
         </div>
     </section>
@@ -881,7 +862,7 @@
                         </div>
                         <div class="flex justify-between items-center pb-6 border-b border-burgundy/10">
                             <span class="font-semibold text-burgundy text-lg">Chủ tài khoản:</span>
-                            <span class="font-playfair font-semibold text-lg"></span>Phương Thảo</span>
+                            <span class="font-playfair font-semibold text-lg">Phương Thảo</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="font-semibold text-burgundy text-lg">Số tài khoản:</span>
